@@ -30,6 +30,7 @@ RUN apk-install -t .build-deps wget ca-certificates \
   && apk del --purge .build-deps
 
 COPY docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 
 WORKDIR /usr/share/kibana
 
